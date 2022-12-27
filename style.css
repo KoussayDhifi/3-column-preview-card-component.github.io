@@ -1,0 +1,115 @@
+@import 'reset.css';
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+}
+
+main {
+    display: flex;
+    height: 500px;
+    width: 950px;
+    border-radius: 10px;
+    overflow: hidden;
+
+}
+
+main > * {
+    display: flex;
+    padding: 50px;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+main p {
+    line-height: 1.5;
+    color:hsla(0, 0%, 100%, 0.75);
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+main h1 {
+    color:hsl(0, 0%, 95%);
+    text-transform: uppercase;
+    font-size: 40px;
+    font-family: 'Big Shoulders Display', cursive;;
+}
+
+img {
+    width: 80px;
+    height: 50px;
+}
+
+.sedans {
+    background-color: hsl(31, 77%, 52%);
+}
+
+.suv {
+    background-color: hsl(184, 100%, 22%);
+}
+
+.luxury {
+    background-color: hsl(179, 100%, 13%);
+}
+
+button {
+    background-color: hsl(0, 0%, 95%);
+    border:hsl(0, 0%, 95%) 1px none;
+    border-radius: 20px;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+    width: 150px;
+    height: 40px;
+}
+
+button:hover {
+    cursor: pointer;
+    animation-name:hoverButton;
+    animation-duration: 0.5s;
+    background-color: transparent;
+    color:hsl(0, 0%, 95%);
+    border: 2px hsl(0, 0%, 95%) solid;
+}
+
+
+
+.one {
+    color:hsl(31, 77%, 52%);
+}
+.two {
+    color:hsl(184, 100%, 22%);
+}
+.three {
+    color:hsl(179, 100%, 13%);
+}
+
+
+
+/*Animations*/
+
+@keyframes hoverButton {
+    from {
+        background-color: hsl(0, 0%, 95%);
+        border:hsl(0, 0%, 95%) 2px none;
+    }
+    to {
+        background-color: transparent;
+        border: 2px hsl(0, 0%, 95%) solid;
+        color:hsl(0, 0%, 95%);
+    }
+}
+
+@media (max-width:950px) {
+    main {
+        flex-direction: column;
+        width: 350px;
+        height: 1300px;
+    }
+    main > * {
+        gap:2rem;
+    }
+}
